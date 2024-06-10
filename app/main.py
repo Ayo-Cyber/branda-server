@@ -30,6 +30,12 @@ async def create_font():
 
     return {"fonts": random_fonts}
 
+#new stuff not working yet .. 
+@app.post("/problem")
+def create_problem(base: Base):
+    response = generate_problem(industry=base.industry, niche=base.niche)
+    return {"response" : response}
+
 
 @app.post("/color")
 async def create_color_pallete(base: Base):
