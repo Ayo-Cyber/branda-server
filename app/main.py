@@ -6,6 +6,7 @@ from typing import Annotated
 from dotenv import load_dotenv
 from config import langchain_helper as lch
 from models.schemas import Strategy, Base
+from models.generator import generate_problem
 import random
 
 
